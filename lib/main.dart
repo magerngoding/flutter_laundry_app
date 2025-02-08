@@ -1,6 +1,9 @@
 //1 ignore_for_file: prefer_const_constructors
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter_laundry_app/config/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -15,16 +18,16 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.green,
+        primaryColor: AppColors.primary,
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.light(
-          primary: Colors.green,
+          primary: AppColors.primary,
           secondary: Colors.greenAccent[400]!,
         ),
         textTheme: GoogleFonts.poppinsTextTheme(),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(Colors.green),
+            backgroundColor: WidgetStatePropertyAll(AppColors.primary),
             shape: WidgetStatePropertyAll(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
