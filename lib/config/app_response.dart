@@ -35,14 +35,16 @@ class AppResponse {
     }
   }
 
-  static invalid(BuildContext context, String messageBody) {
+  static invalidInput(BuildContext context, String messageBody) {
     Map errors = jsonDecode(messageBody)['errors'];
     showDialog(
       context: context,
       builder: (context) {
         return SimpleDialog(
           titlePadding: EdgeInsets.fromLTRB(16, 16, 16, 0),
-          title: Text('Invalid Input'),
+          title: Text(
+            'Invalid Input',
+          ),
           children: [
             ...errors.entries.map((e) {
               return ListTile(
@@ -64,7 +66,13 @@ class AppResponse {
               padding: EdgeInsets.all(16.0),
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text('Close'),
+                child: Text(
+                  'Close',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
